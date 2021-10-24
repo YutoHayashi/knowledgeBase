@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: '/knowledgeBase',
   siteMetadata: {
     title: `Alta KnowledgeBase`,
     description: `Alta knowledge base.`,

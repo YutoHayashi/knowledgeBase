@@ -33,4 +33,4 @@ jobs:
       - name: Run a multi-line script
         run: |
           yarn
-          yarn build
+          yarn deploy
