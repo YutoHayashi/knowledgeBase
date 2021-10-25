@@ -41,6 +41,9 @@ module.exports = {
       options: {
         plugins: [
           {
+            resolve: `gatsby-remark-code-titles`,
+          },
+          {
             resolve: `gatsby-remark-prismjs`,
           }
         ]

@@ -1,7 +1,7 @@
 FROM node:14.15.5-alpine3.13
 
 RUN apk update && \
-    apk add python gcc make musl-dev g++
+    apk add python2 gcc make musl-dev g++
 
 WORKDIR /app
 
