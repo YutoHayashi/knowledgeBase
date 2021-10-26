@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: '/knowledgeBase',
+  pathPrefix: `/knowledgeBase`,
   siteMetadata: {
     title: `Alta KnowledgeBase`,
     description: `Alta knowledge base.`,
@@ -58,3 +58,6 @@ module.exports = {
     },
   ],
 }
+require( `dotenv` ).config( {
+  path: `.env.${ process.env.NODE_ENV }`,
+} );

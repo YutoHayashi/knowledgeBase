@@ -1,9 +1,8 @@
 import React from 'react';
-import { useStaticQuery, graphql, Link } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import { PostAllQuery } from '@/../types/graphql-types';
 import { Base } from '@layouts/Base';
 import { Seo } from '@components/Seo';
-import { Markdown } from '@/types';
 type Props = {
     data: PostAllQuery;
 }

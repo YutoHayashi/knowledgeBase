@@ -8,6 +8,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      PREFIX_PATHS: true gatsby build
     steps:
       - uses: actions/checkout@v2
       - name: Setup Node
