@@ -44,7 +44,7 @@
   ],
   "license": "0BSD",
   "scripts": {
-    "build": "gatsby build --prefix-paths && gh-pages -d public -b main",
+    "build": "gatsby build --prefix-paths",
     "develop": "gatsby develop --host 0.0.0.0",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "gatsby develop",
