@@ -1,33 +1,31 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { Markdown } from '@/types';
+import { SingleQuery } from '@/../types/graphql-types';
 import { Base } from '@layouts/Base';
 import { Seo } from '@components/Seo';
 type Props = {
-    data: {
-        markdownRemark: Markdown;
-    };
+    data: SingleQuery;
 };
 const Single: React.FC<Props> = ( { data } ) => {
     return (
         <>
-            <Seo title={ data.markdownRemark.frontmatter.title } />
+            <Seo title={ data.markdownRemark?.frontmatter?.title || '' } />
             <Base>
                 <h1>Single page</h1>
-                <h2>title: { data.markdownRemark.frontmatter.title }</h2>
-                <p>date: { data.markdownRemark.frontmatter.date }</p>
-                <p>slug: { data.markdownRemark.fields.slug }</p>
-                <p>excerpt: { data.markdownRemark.excerpt }</p>
+                <h2>title: { data.markdownRemark?.frontmatter?.title }</h2>
+                <p>date: { data.markdownRemark?.frontmatter?.date }</p>
+                <p>slug: { data.markdownRemark?.fields?.slug }</p>
+                <p>excerpt: { data.markdownRemark?.excerpt }</p>
                 <div>
                     html:
-                    <div dangerouslySetInnerHTML={ { __html: data.markdownRemark.html } } />
+                    <div dangerouslySetInnerHTML={ { __html: data.markdownRemark?.html || '' } } />
                 </div>
             </Base>
         </>
     );
 }
-export const query = graphql`
-    query ( $slug: String! ) {
+export const pageQuery = graphql`
+    query Single ( $slug: String ) {
         markdownRemark( fields: { slug: { eq: $slug } } ) {
             html
             htmlAst

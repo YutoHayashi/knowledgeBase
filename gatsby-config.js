@@ -45,9 +45,16 @@ module.exports = {
           },
           {
             resolve: `gatsby-remark-prismjs`,
-          }
-        ]
-      }
-    }
+          },
+        ],
+      },
+    },
+    `gatsby-plugin-typescript`,
+    {
+      resolve: `gatsby-plugin-graphql-codegen`,
+      options: {
+        fileName: `types/graphql-types.d.ts`,
+      },
+    },
   ],
 }
