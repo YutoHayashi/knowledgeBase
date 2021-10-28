@@ -26,7 +26,7 @@ const DefaultProps: Pick<Props, 'description' | 'lang' | 'meta'> = {
     lang: 'ja',
     meta: [  ],
 };
-export const Seo: React.FunctionComponent<Partial<Props> & Pick<Props, 'title'>> = ( _props ) => {
+export const Seo: React.FC<Partial<Props> & Pick<Props, 'title'>> = ( _props ) => {
     const props: Props = { ...DefaultProps, ..._props };
     const { site } = useStaticQuery( graphql`
         query {

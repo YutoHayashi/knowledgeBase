@@ -1,5 +1,5 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import { SingleQuery } from '@/../types/graphql-types';
 import { Base } from '@layouts/Base';
 import { Seo } from '@components/Seo';
@@ -16,6 +16,14 @@ const Single: React.FC<Props> = ( { data } ) => {
                 <p>date: { data.markdownRemark?.frontmatter?.date }</p>
                 <p>slug: { data.markdownRemark?.fields?.slug }</p>
                 <p>excerpt: { data.markdownRemark?.excerpt }</p>
+                <p>tags:
+                    { data.markdownRemark?.frontmatter?.tags?.map( ( tag, i ) => (
+                        <Link to={ `/tags/${ tag }` } key={ i } className='text-blue-500 hover:text-blue-400 font-bold'>{ tag }</Link>
+                    ) ) }
+                </p>
+                <p>category:
+                    <Link to={ `/categories/${ data.markdownRemark?.frontmatter?.categoryslug }` } className='text-blue-500 hover:text-blue-400 font-bold'>{ data.markdownRemark?.frontmatter?.category }</Link>
+                </p>
                 <div>
                     html:
                     <div dangerouslySetInnerHTML={ { __html: data.markdownRemark?.html || '' } } />
@@ -33,6 +41,9 @@ export const pageQuery = graphql`
             frontmatter {
                 title
                 date( formatString: "MM DD, YYYY" )
+                category
+                categoryslug
+                tags
             }
             fields {
                 slug

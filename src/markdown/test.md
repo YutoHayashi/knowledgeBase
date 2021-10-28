@@ -1,9 +1,9 @@
 ---
 title: "JavaScript Syntax"
 date: "2021-10-24"
-category: "test"
-categoryslug: "test"
-tags: ["tag2","tag3"]
+category: "test2"
+categoryslug: "test2"
+tags: ["tag1","tag3"]
 ---
 
 aaa

@@ -15,7 +15,7 @@ exports.createPages = ( { graphql, actions } ) => {
   const { createPage } = actions;
   return graphql( `
     {
-      allMarkdownRemark {
+      posts: allMarkdownRemark {
         edges {
           node {
             id
@@ -25,14 +25,42 @@ exports.createPages = ( { graphql, actions } ) => {
           }
         }
       }
+      categories: allMarkdownRemark {
+        distinct( field: frontmatter___categoryslug )
+      }
+      tags: allMarkdownRemark {
+        distinct( field: frontmatter___tags )
+      }
     }
   ` ).then( result => {
-    result.data.allMarkdownRemark.edges.forEach( ( { node } ) => {
+    if ( result.errors ) Promise.reject( result.errors );
+    const posts = result.data.posts.edges;
+    const categories = result.data.categories.distinct;
+    const tags = result.data.tags.distinct;
+    posts.forEach( ( { node } ) => {
       createPage( {
         path: node.fields.slug,
-        component: path.resolve( `./src/pages/Single.tsx` ),
+        component: path.resolve( `./src/templates/Single.tsx` ),
         context: {
           slug: node.fields.slug,
+        },
+      } );
+    } );
+    categories.forEach( cat => {
+      createPage( {
+        path: `categories/${ cat }`,
+        component: path.resolve( `./src/templates/Categories.tsx` ),
+        context: {
+          slug: cat,
+        },
+      } );
+    } );
+    tags.forEach( tag => {
+      createPage( {
+        path: `tags/${ tag }`,
+        component: path.resolve( `./src/templates/Tags.tsx` ),
+        context: {
+          slug: tag,
         },
       } );
     } );
