@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-tags-tsx",
+    "path": "/tags/tag2",
+    "result": {"data":{"allMarkdownRemark":{"nodes":[{"id":"0e3c8a2c-8832-5d4f-90f4-286034b59167","frontmatter":{"title":"JavaScript Syntax","date":"10 24, 2021","category":"test","categoryslug":"test","tags":["tag2","tag3"]},"excerpt":"aaa","fields":{"slug":"/markdown/code/"}}]}},"pageContext":{"slug":"tag2"}},
+    "staticQueryHashes": ["63159454"]}

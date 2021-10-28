@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-categories-tsx",
+    "path": "/categories/test2",
+    "result": {"data":{"allMarkdownRemark":{"nodes":[{"id":"63d573ba-975c-5536-8c88-450fe4856f30","frontmatter":{"title":"JavaScript Syntax","date":"10 24, 2021","category":"test2","categoryslug":"test2","tags":["tag1","tag3"]},"excerpt":"aaa","fields":{"slug":"/markdown/test/"}}]}},"pageContext":{"slug":"test2"}},
+    "staticQueryHashes": ["63159454"]}
