@@ -2,7 +2,6 @@
 title: "JavaScript Syntax"
 date: "2021-10-24"
 category: "test"
-categoryslug: "test"
 tags: ["tag2","tag3"]
 ---
 

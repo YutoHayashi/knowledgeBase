@@ -8,19 +8,19 @@ type Props = {
     data: TagsQuery;
 };
 const Tags: React.FC<Props> = ( { data } ) => {
-    const nodes = data.allMarkdownRemark.nodes;
+    const posts = data.posts.nodes;
     return (
         <>
-            <Seo title={ nodes[ 0 ].frontmatter?.title || '' } />
+            <Seo title={ posts[ 0 ].frontmatter?.title || '' } />
             <Base>
-                { nodes.map( node => <PostItem key={ node.id } { ...{ node, } } /> ) }
+                { posts.map( node => <PostItem key={ node.id } { ...{ node, } } /> ) }
             </Base>
         </>
     );
 }
 export const pageQuery = graphql`
     query Tags ( $slug: [String] ) {
-        allMarkdownRemark(
+        posts: allMarkdownRemark(
             limit: 5
             sort: { fields: [ frontmatter___date ], order: DESC }
             filter: { frontmatter: { tags: { in: $slug } } }
@@ -31,7 +31,6 @@ export const pageQuery = graphql`
                     title
                     date( formatString: "MM DD, YYYY" )
                     category
-                    categoryslug
                     tags
                 }
                 excerpt( format: PLAIN, pruneLength: 120 )

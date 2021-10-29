@@ -26,7 +26,7 @@ exports.createPages = ( { graphql, actions } ) => {
         }
       }
       categories: allMarkdownRemark {
-        distinct( field: frontmatter___categoryslug )
+        distinct( field: frontmatter___category )
       }
       tags: allMarkdownRemark {
         distinct( field: frontmatter___tags )

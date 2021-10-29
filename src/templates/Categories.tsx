@@ -8,23 +8,23 @@ type Props = {
     data: CategoriesQuery;
 };
 const Categories: React.FC<Props> = ( { data } ) => {
-    const nodes = data.allMarkdownRemark.nodes;
+    const posts = data.posts.nodes;
     return (
         <>
-            <Seo title={ nodes[ 0 ].frontmatter?.title || '' } />
+            <Seo title={ posts[ 0 ].frontmatter?.title || '' } />
             <Base>
-                <h2>Categories: { nodes[ 0 ].frontmatter?.category }</h2>
-                { nodes.map( node => <PostItem key={ node.id } { ...{ node, } } /> ) }
+                <h2>Categories: { posts[ 0 ].frontmatter?.category }</h2>
+                { posts.map( node => <PostItem key={ node.id } { ...{ node, } } /> ) }
             </Base>
         </>
     );
 }
 export const pageQuery = graphql`
     query Categories ( $slug: String ) {
-        allMarkdownRemark(
+        posts: allMarkdownRemark(
             limit: 5
             sort: { fields: [ frontmatter___date ], order: DESC }
-            filter: { frontmatter: { categoryslug: { eq: $slug } } }
+            filter: { frontmatter: { category: { eq: $slug } } }
         ) {
             nodes {
                 id
@@ -32,7 +32,6 @@ export const pageQuery = graphql`
                     title
                     date( formatString: "MM DD, YYYY" )
                     category
-                    categoryslug
                     tags
                 }
                 excerpt( format: PLAIN, pruneLength: 120 )
