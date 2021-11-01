@@ -1,7 +1,7 @@
 ---
 title: "JavaScript Syntax"
 date: "2021-10-24"
-category: "test"
+category: "テスト"
 tags: ["tag2","tag3"]
 ---
 

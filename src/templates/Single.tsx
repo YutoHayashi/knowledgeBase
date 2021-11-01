@@ -3,6 +3,7 @@ import { graphql, Link } from 'gatsby';
 import { SingleQuery } from '@/../types/graphql-types';
 import { Base } from '@layouts/Base';
 import { Seo } from '@components/Seo';
+import '@/styles/single.scss';
 type Props = {
     data: SingleQuery;
 };
@@ -25,7 +26,7 @@ const Single: React.FC<Props> = ( { data } ) => {
                 <p>category:
                     <Link to={ `/categories/${ post?.frontmatter?.category }` } className='text-blue-500 hover:text-blue-400 font-bold'>{ post?.frontmatter?.category }</Link>
                 </p>
-                <div>
+                <div className='post-md'>
                     html:
                     <div dangerouslySetInnerHTML={ { __html: post?.html || '' } } />
                 </div>
