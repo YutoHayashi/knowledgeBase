@@ -1,5 +1,6 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
+import { Helmet } from 'react-helmet';
 import { SingleQuery } from '@/../types/graphql-types';
 import { Base } from '@layouts/Base';
 import { Seo } from '@components/Seo';
@@ -12,7 +13,7 @@ const Single: React.FC<Props> = ( { data } ) => {
     return (
         <>
             <Seo title={ post?.frontmatter?.title || '' } />
-            <Base>
+            <Base mv='notfull'>
                 <h1>Single page</h1>
                 <h2>title: { post?.frontmatter?.title }</h2>
                 <p>date: { post?.frontmatter?.date }</p>

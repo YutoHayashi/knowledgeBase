@@ -12,7 +12,7 @@ const Index: React.FC<Props> = ( { data } ) => {
     return (
         <>
             <Seo title='Top' />
-            <Base>
+            <Base mv='full'>
                 <h2>posts</h2>
                 { posts.edges.map( md => md.node ).map( node => <PostItem key={ node.id } { ...{ node, } } /> ) }
             </Base>

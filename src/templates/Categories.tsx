@@ -12,7 +12,7 @@ const Categories: React.FC<Props> = ( { data } ) => {
     return (
         <>
             <Seo title={ posts[ 0 ].frontmatter?.title || '' } />
-            <Base>
+            <Base mv='notfull'>
                 <h2>Categories: { posts[ 0 ].frontmatter?.category }</h2>
                 { posts.map( node => <PostItem key={ node.id } { ...{ node, } } /> ) }
             </Base>
