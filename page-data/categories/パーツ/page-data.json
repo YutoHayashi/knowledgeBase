@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-categories-tsx",
+    "path": "/categories/パーツ",
+    "result": {"data":{"posts":{"nodes":[{"id":"55a9e3d4-5099-50b0-9631-e7768bbc9684","frontmatter":{"title":"useMountedRefフック","date":"11 05, 2021","category":"パーツ","tags":["React","JavaScript"]},"excerpt":"","fields":{"slug":"/markdown/parts/reactjs/use_mounted_ref/"}}]}},"pageContext":{"slug":"パーツ"}},
+    "staticQueryHashes": ["2059598792","3159585216","63159454"]}

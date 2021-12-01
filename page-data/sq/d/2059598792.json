@@ -1,1 +1,1 @@
-{"data":{"cats":{"distinct":["test","test2","テスト"]},"tags":{"distinct":["tag1","tag2","tag3"]}}}
+{"data":{"cats":{"distinct":["バグ","パーツ","リファレンス"]},"tags":{"distinct":["JavaScript","Laravel","PHP","React"]}}}

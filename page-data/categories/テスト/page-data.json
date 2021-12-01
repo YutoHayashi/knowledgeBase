@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-categories-tsx",
-    "path": "/categories/テスト",
-    "result": {"data":{"posts":{"nodes":[{"id":"0e3c8a2c-8832-5d4f-90f4-286034b59167","frontmatter":{"title":"JavaScript Syntax","date":"10 24, 2021","category":"テスト","tags":["tag2","tag3"]},"excerpt":"aaa","fields":{"slug":"/markdown/code/"}}]}},"pageContext":{"slug":"テスト"}},
-    "staticQueryHashes": ["2059598792","63159454"]}

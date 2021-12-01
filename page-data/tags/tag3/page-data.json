@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-tags-tsx",
-    "path": "/tags/tag3",
-    "result": {"data":{"posts":{"nodes":[{"id":"0e3c8a2c-8832-5d4f-90f4-286034b59167","frontmatter":{"title":"JavaScript Syntax","date":"10 24, 2021","category":"テスト","tags":["tag2","tag3"]},"excerpt":"aaa","fields":{"slug":"/markdown/code/"}},{"id":"63d573ba-975c-5536-8c88-450fe4856f30","frontmatter":{"title":"JavaScript Syntax","date":"10 24, 2021","category":"test2","tags":["tag1","tag3"]},"excerpt":"aaa","fields":{"slug":"/markdown/test/"}},{"id":"df662c63-0fbd-5dcf-9985-2ebc9d4cfa8d","frontmatter":{"title":"JavaScript Syntax","date":"10 24, 2021","category":"test","tags":["tag1","tag3"]},"excerpt":"Use validation rule \"unique\" in resource controllers I learned this from 中日書房 case. Background The project use resource…","fields":{"slug":"/markdown/test2/"}}]}},"pageContext":{"slug":"tag3"}},
-    "staticQueryHashes": ["2059598792","63159454"]}

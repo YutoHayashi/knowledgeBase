@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-categories-tsx",
+    "path": "/categories/リファレンス",
+    "result": {"data":{"posts":{"nodes":[{"id":"0e3c8a2c-8832-5d4f-90f4-286034b59167","frontmatter":{"title":"JavaScript Syntax","date":"10 24, 2021","category":"リファレンス","tags":["JavaScript"]},"excerpt":"aaa","fields":{"slug":"/markdown/code/"}},{"id":"df662c63-0fbd-5dcf-9985-2ebc9d4cfa8d","frontmatter":{"title":"JavaScript Syntax","date":"10 24, 2021","category":"リファレンス","tags":["PHP","Laravel"]},"excerpt":"Use validation rule \"unique\" in resource controllers I learned this from 中日書房 case. Background The project use resource…","fields":{"slug":"/markdown/test2/"}}]}},"pageContext":{"slug":"リファレンス"}},
+    "staticQueryHashes": ["2059598792","3159585216","63159454"]}
