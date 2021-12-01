@@ -1,4 +1,4 @@
-import { Seo } from '@components/Seo';
+import { Seo } from '@/components/utils/Seo';
 import { Base } from '@layouts/Base';
 import React from 'react';
 const _404: React.FC<{  }> = ( {  } ) => {

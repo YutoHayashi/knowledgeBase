@@ -1,7 +1,7 @@
 module.exports = {
   pathPrefix: `/knowledgeBase`,
   siteMetadata: {
-    title: `Alta KnowledgeBase`,
+    title: `アルタナレッジベース`,
     description: `Alta knowledge base.`,
     author: `YutoHayashi`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,

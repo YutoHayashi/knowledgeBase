@@ -1,13 +1,25 @@
-import { Gnav } from '@components/molecules/Gnav';
 import React from 'react';
-type Props = {}
-type States = {  }
+import { Header } from '@/components/organisms/Header';
+import { Footer } from '@/components/organisms/Footer';
+import { Gnav } from '@components/organisms/Gnav';
+type Props = {
+    children: {
+        mv?: React.ReactNode;
+        main: React.ReactNode;
+    };
+};
+type States = {};
 export const Base: React.FC<Props> = ( { children } ) => {
+    const { main, mv = null } = children;
     return (
         <>
-            <h1>アルタ ナレッジベース</h1>
+            <Header />
+            { mv }
             <Gnav />
-            { children }
+            <main>
+                { main }
+            </main>
+            <Footer />
         </>
     );
-}
+};

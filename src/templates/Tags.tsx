@@ -1,7 +1,7 @@
 import { graphql } from 'gatsby';
 import { TagsQuery } from '@/../types/graphql-types';
 import React from 'react';
-import { Seo } from '@components/Seo';
+import { Seo } from '@/components/utils/Seo';
 import { Base } from '@layouts/Base';
 import { PostItem } from '@components/molecules/PostItem';
 type Props = {

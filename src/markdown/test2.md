@@ -1,8 +1,9 @@
 ---
 title: "JavaScript Syntax"
 date: "2021-10-24"
-category: "test"
-tags: ["tag1","tag3"]
+category: "リファレンス"
+tags: ["PHP","Laravel"]
+author: "べ"
 ---
 
 # Use validation rule "unique" in resource controllers

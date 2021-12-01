@@ -1,8 +1,9 @@
 ---
 title: "JavaScript Syntax"
 date: "2021-10-24"
-category: "test2"
-tags: ["tag1","tag3"]
+category: "バグ"
+tags: ["JavaScript"]
+author: "べ"
 ---
 
 aaa

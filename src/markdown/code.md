@@ -1,8 +1,9 @@
 ---
 title: "JavaScript Syntax"
 date: "2021-10-24"
-category: "テスト"
-tags: ["tag2","tag3"]
+category: "リファレンス"
+tags: ["JavaScript"]
+author: "べ"
 ---
 
 aaa

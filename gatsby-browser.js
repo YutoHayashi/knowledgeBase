@@ -7,3 +7,4 @@
 // You can delete this file if you're not using it
 import './src/styles/style.css';
 import 'prismjs/themes/prism-solarizedlight.css';
+import '@mdi/font/css/materialdesignicons.min.css';
