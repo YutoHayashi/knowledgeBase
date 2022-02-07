@@ -50,7 +50,7 @@ export const Seo: React.FC<Partial<Props> & Pick<Props, 'title'>> = ( _props ) =
                 lang,
             } }
             title={ title }
-            titleTemplate={ title ? `%s | ${ name }` : undefined }
+            titleTemplate={ title ? `%s - ${ name }` : undefined }
             meta={ [
                 { name: `author`, content: author, },
                 { name: `description`, content: description, },

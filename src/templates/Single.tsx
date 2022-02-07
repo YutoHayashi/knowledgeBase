@@ -14,26 +14,24 @@ const Single: React.FC<Props> = ( { data } ) => {
             <Seo title={ post?.frontmatter?.title || '' } />
             <Base>
                 { {
-                    main: (
-                        <>
-                        <h1>Single page</h1>
-                        <h2>title: { post?.frontmatter?.title }</h2>
-                        <p>date: { post?.frontmatter?.date }</p>
-                        <p>slug: { post?.fields?.slug }</p>
-                        <p>excerpt: { post?.excerpt }</p>
-                        <p>tags:
+                    mv: (
+                        <section className='py-36 max-w-inner mx-auto'>
+                            <Link to={ `/categories/${ post?.frontmatter?.category }` } className='block bg-primary py-1 px-5 rounded text-white tracking-wider whitespace-nowrap w-min mb-6'>{ post?.frontmatter?.category }</Link>
+                            <small className='inline-block w-full font-bold text-12'>{ post?.frontmatter?.date }</small>
+                            <h2 className='font-bold text-primary text-5xl tracking-wider mb-10'>{ post?.frontmatter?.title }</h2>
                             { post?.frontmatter?.tags?.map( ( tag, i ) => (
-                                <Link to={ `/tags/${ tag }` } key={ i } className='text-blue-500 hover:text-blue-400 font-bold'>{ tag }</Link>
+                                <Link to={ `/tags/${ tag }` } key={ i } className='inline-block text-blue-500 hover:text-blue-400 font-bold mb-6 px-3'>#{ tag }</Link>
                             ) ) }
-                        </p>
-                        <p>category:
-                            <Link to={ `/categories/${ post?.frontmatter?.category }` } className='text-blue-500 hover:text-blue-400 font-bold'>{ post?.frontmatter?.category }</Link>
-                        </p>
-                        <div className='post-md'>
-                            html:
-                            <div dangerouslySetInnerHTML={ { __html: post?.html || '' } } />
+                        </section>
+                    ),
+                    main: (
+                        <div className='py-14 bg-secondary'>
+                            <div className='max-w-inner mx-auto mb-12 w-full text-left'>
+                                <div className='post-md'>
+                                    <div dangerouslySetInnerHTML={ { __html: post?.html || '' } } />
+                                </div>
+                            </div>
                         </div>
-                        </>
                     ),
                 } }
             </Base>

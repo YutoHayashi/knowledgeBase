@@ -2,7 +2,7 @@
 title: "test post"
 date: "2022-02-04"
 category: "リファレンス"
-tags: ["php"]
+tags: ["PHP"]
 author: "59"
 ---
 # title

@@ -16,4 +16,4 @@ export const PostItem: React.FC<Props> = ( { node } ) => {
             </Link>
         </div>
     );
-}
+};

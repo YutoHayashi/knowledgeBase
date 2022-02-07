@@ -2,12 +2,15 @@ import React from 'react';
 import { useStaticQuery, graphql, Link } from 'gatsby';
 type Props = {};
 export const Header: React.VFC<Props> = ( {  } ) => {
-    const { site } = useStaticQuery( graphql`
+    const { site, categories } = useStaticQuery( graphql`
         query {
-            site {
+            site: site {
                 siteMetadata {
                     title
                 }
+            }
+            categories: allMarkdownRemark {
+                distinct( field: frontmatter___category )
             }
         }
     ` );
@@ -21,10 +24,8 @@ export const Header: React.VFC<Props> = ( {  } ) => {
                     <ul className='flex'>
                         { [
                             { 'title': 'トップ', 'to': '/', },
-                            { 'title': 'リファレンス', 'to': '/references', },
-                            { 'title': 'バグ', 'to': '/bugs', },
-                            { 'title': 'パーツ', 'to': '/parts', },
-                            { 'title': 'ガイドライン', 'to': '/guidelines', },
+                            ...categories.distinct.map( ( cat: string ) => ( { 'title': cat, 'to': `/categories/${ cat }` } ) ),
+                            { 'title': 'ガイドライン', 'to': '/guideline', },
                             { 'title': '使い方', 'to': '/usage', },
                         ].map( ( item, index ) => (
                             <li key={ index }>

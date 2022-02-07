@@ -29,9 +29,9 @@ const Index: React.FC<Props> = ( { data } ) => {
                         </section>
                     ),
                     main: [
-                        { heading: 'references', subheading: 'リファレンス', nodes: references.edges, to: `/references`, },
-                        { heading: 'bugs', subheading: 'バグ', nodes: bugs.edges, to: `/gugs` },
-                        { heading: 'parts', subheading: 'パーツ', nodes: parts.edges, to: `/parts` },
+                        { heading: 'references', subheading: 'リファレンス', nodes: references.edges, to: `/categories/リファレンス`, },
+                        { heading: 'bugs', subheading: 'バグ', nodes: bugs.edges, to: `/categories/バグ` },
+                        { heading: 'parts', subheading: 'パーツ', nodes: parts.edges, to: `/categories/パーツ` },
                     ].map( ( section, index ) => (
                         <section key={ index } className={ `py-14 ${ index % 2 === 0 ? 'bg-secondary' : '' }` }>
                             <div className='max-w-inner mx-auto text-center'>
@@ -53,6 +53,7 @@ export const pageQuery = graphql`
     query Index {
         references: allMarkdownRemark(
             filter: { frontmatter: { category: { eq: "リファレンス" } } }
+            sort: { fields: [ frontmatter___date ], order: DESC }
             limit: 3
         ) {
             totalCount
@@ -64,6 +65,7 @@ export const pageQuery = graphql`
                         slug
                     }
                     frontmatter {
+                        author
                         title
                         date( formatString: "MM DD, YYYY" )
                         category
@@ -74,6 +76,7 @@ export const pageQuery = graphql`
         }
         parts: allMarkdownRemark(
             filter: { frontmatter: { category: { eq: "パーツ" } } }
+            sort: { fields: [ frontmatter___date ], order: DESC }
             limit: 3
         ) {
             totalCount
@@ -85,6 +88,7 @@ export const pageQuery = graphql`
                         slug
                     }
                     frontmatter {
+                        author
                         title
                         date( formatString: "MM DD, YYYY" )
                         category
@@ -95,6 +99,7 @@ export const pageQuery = graphql`
         }
         bugs: allMarkdownRemark(
             filter: { frontmatter: { category: { eq: "バグ" } } }
+            sort: { fields: [ frontmatter___date ], order: DESC }
             limit: 3
         ) {
             totalCount
@@ -106,6 +111,7 @@ export const pageQuery = graphql`
                         slug
                     }
                     frontmatter {
+                        author
                         title
                         date( formatString: "MM DD, YYYY" )
                         category

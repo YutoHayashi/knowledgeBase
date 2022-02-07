@@ -15,12 +15,12 @@ export const Gnav: React.VFC<Props> = ( {  } ) => {
         }
     ` );
     return (
-        <div className='bg-primary text-white w-full'>
+        <div className='bg-primary text-white w-full sticky top-0'>
             <nav className='max-w-inner mx-auto'>
                 <MoleculesGnav { ...{
                     items: [
                         { title: 'カテゴリ', to: '/categories', children: gnavdata.cats.distinct.map( cat => ( { title: cat, to: `/categories/${ cat }` } ) ), },
-                        { title: 'タグ', to: '/tags', children: gnavdata.tags.distinct.map( tag => ( { title: tag, to: `/tags/${ tag }`, } ) ), },
+                        { title: 'タグ', to: '/tags', children: gnavdata.tags.distinct.map( tag => ( { title: `#${ tag }`, to: `/tags/${ tag }`, } ) ), },
                     ],
                 } } />
             </nav>
