@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-categories-tsx",
+    "path": "/categories/バグ/1/",
+    "result": {"data":{"posts":{"nodes":[{"id":"a6ea93f0-6dd5-5dc5-8713-cad413129ec4","frontmatter":{"title":"JavaScript Syntax","date":"10 24, 2021","category":"バグ","tags":["JavaScript"]},"excerpt":"aaa xxxxx","fields":{"slug":"/markdown/test3/"}}]}},"pageContext":{"slug":"バグ","limit":20,"skip":0}},
+    "staticQueryHashes": ["1898098588","2059598792","2070179686","63159454"]}

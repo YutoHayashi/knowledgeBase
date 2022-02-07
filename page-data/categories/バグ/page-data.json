@@ -1,5 +1,5 @@
 {
-    "componentChunkName": "component---src-templates-categories-tsx",
-    "path": "/categories/バグ",
-    "result": {"data":{"posts":{"nodes":[{"id":"a6ea93f0-6dd5-5dc5-8713-cad413129ec4","frontmatter":{"title":"JavaScript Syntax","date":"10 24, 2021","category":"バグ","tags":["JavaScript"]},"excerpt":"aaa xxxxx","fields":{"slug":"/markdown/test3/"}},{"id":"63d573ba-975c-5536-8c88-450fe4856f30","frontmatter":{"title":"JavaScript Syntax","date":"10 24, 2021","category":"バグ","tags":["JavaScript"]},"excerpt":"aaa","fields":{"slug":"/markdown/test/"}}]}},"pageContext":{"slug":"バグ"}},
-    "staticQueryHashes": ["2059598792","3159585216","63159454"]}
+    "componentChunkName": "component---src-templates-redirect-to-page-1-tsx",
+    "path": "/categories/バグ/",
+    "result": {"pageContext":{}},
+    "staticQueryHashes": []}

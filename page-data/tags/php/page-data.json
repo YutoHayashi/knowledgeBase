@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-tags-tsx",
-    "path": "/tags/php",
-    "result": {"data":{"posts":{"nodes":[{"id":"56f1c293-391c-510c-b7d3-711c01fe660f","frontmatter":{"title":"test post","date":"02 04, 2022","category":"リファレンス","tags":["php"]},"excerpt":"title second title third title item tag 1 tag 2","fields":{"slug":"/markdown/post/"}}]}},"pageContext":{"slug":"php"}},
-    "staticQueryHashes": ["2059598792","3159585216","63159454"]}

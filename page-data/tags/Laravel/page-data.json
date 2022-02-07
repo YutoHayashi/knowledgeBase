@@ -1,5 +1,5 @@
 {
-    "componentChunkName": "component---src-templates-tags-tsx",
-    "path": "/tags/Laravel",
-    "result": {"data":{"posts":{"nodes":[{"id":"f1e53f5d-caac-5cc2-b902-e8ce36885572","frontmatter":{"title":"kawasaki","date":"02 04, 2022","category":"リファレンス","tags":["PHP","Laravel"]},"excerpt":"てすと","fields":{"slug":"/markdown/kawasaki/"}},{"id":"df662c63-0fbd-5dcf-9985-2ebc9d4cfa8d","frontmatter":{"title":"JavaScript Syntax","date":"10 24, 2021","category":"リファレンス","tags":["PHP","Laravel"]},"excerpt":"Use validation rule \"unique\" in resource controllers I learned this from 中日書房 case. Background The project use resource…","fields":{"slug":"/markdown/test2/"}}]}},"pageContext":{"slug":"Laravel"}},
-    "staticQueryHashes": ["2059598792","3159585216","63159454"]}
+    "componentChunkName": "component---src-templates-redirect-to-page-1-tsx",
+    "path": "/tags/Laravel/",
+    "result": {"pageContext":{}},
+    "staticQueryHashes": []}
