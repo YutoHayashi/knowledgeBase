@@ -1,0 +1,19 @@
+---
+title: "【Laravel】migrationでユニークキーを削除する方法"
+date: "2021-12-06"
+category: "リファレンス"
+tags: ["Laravel"]
+author: "川崎 尚弥"
+---
+
+ユニークキー追加の記述だけを書くとユニークキーが残り続けてしまうため、削除の記述も書く必要がある
+
+```php:title=text.php
+<?php
+public function down()
+{
+  Schema::table('companies', function (Blueprint $table) {
+    $table->dropUnique(['other_id']);
+  });
+}
+```
